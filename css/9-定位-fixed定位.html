@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fixed定位</title>
+</head>
+<!--
+fixed定位：元素脱离文本流；从普通文本中删除；并相对于【浏览器视窗】定位，不随文档滚动而移动;
+    类似页面的：回到顶部的html块
+
+overflow：溢出
+-->
+<style>
+  .fix{
+    position: fixed;
+    left: 80%;
+    top: 80%;
+  }
+  .over{
+      border: 1px solid red;
+      width: 50px;
+      height: 150px;
+      overflow: auto;
+  }
+</style>
+<body>
+    <div class="over">
+        <span>asdfghjkqwertl</span>
+    </div>
+    <div style="height: 1500px">
+        <img class="fix" src="img_5.png">
+    </div>
+
+
+</body>
+</html>
