@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>相对定位</title>
+</head>
+
+<!--
+css 有三种基本的定位机制：
+普通流：从上到下
+定位：position：static正常生成的文档流、【relative相对定位】、【absolute绝对定位】、fixed固定定位
+浮动：
+-->
+
+<!--
+相对定位：相对于自己之前位置的移动。元素框偏离某个距离。元素仍保持其未定位前的形状。原本所占的空间仍保留
+-->
+
+<style>
+    .mg2 {
+        position: relative;
+        left: 50px; /* 相对之前位置移动多少 */
+        top: 50px; /* 相对之前位置移动多少 */
+    }
+</style>
+<body>
+<img src="img_3.png">
+<img class="mg2" src="img_1.png">
+<img src="img_4.png">
+
+</body>
+</html>
