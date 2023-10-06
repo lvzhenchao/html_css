@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>宽高及display</title>
+</head>
+<style>
+
+  /*display: none;页面不显示,但是内容有 */
+
+  div{ /* 默认的宽高跟着div里面的内容走；可以将块元素改为行内元素display: inline */
+    /*width: 200px;*/
+    /*height: 200px;*/
+    border: 1px solid red;
+  }
+  span{ /* span行内元素的宽高不管用；需要将行内元素改为块元素display: inline-block */
+    display: inline-block;
+    border: 1px solid green;
+    width: 100px;
+    height: 100px;
+  }
+  div ul li img{
+    width: 30px;
+    height: 30px;
+  }
+</style>
+<body>
+  <span>
+    我是行内元素
+  </span>
+  <div>
+    <ul >
+      <li>文章1</li>
+      <li>文章2</li>
+      <li>文章3</li>
+      <li>文章4</li>
+    </ul>
+  </div>
+  <div>
+    <ul >
+      <li><img src="img.png"></li>
+      <li><img src="img.png"></li>
+      <li><img src="img.png"></li>
+      <li><img src="img.png"></li>
+    </ul>
+  </div>
+
+</body>
+</html>
