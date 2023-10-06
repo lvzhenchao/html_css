@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型</title>
+</head>
+<!-- 块元素有效 -->
+<!--margin:外边距 border:边框 padding:内边距 content:内容-->
+<style>
+    div{
+        width: 200px;
+        height: 200px;
+        border: 1px solid red;
+        /*margin: 50px;*/
+        margin: 50px auto; /* 左右居中 */
+    }
+    p{
+        width: 100px;
+        height: 100px;
+        border: 1px solid blue;
+        /*border-style: double;*/
+        /*border-width: 10px;*/
+        /*border-color: blue;*/
+        /*border-top: 5px solid red;*/
+        /*border-left: 5px dotted gray;*/
+        /*border-right: 5px double blue;*/
+        /*border-bottom: 5px dashed green;*/
+        padding: 20px;
+        /*padding-top: 10px;*/
+        /*padding-left: 10px;*/
+        margin: 10px; /* 以父级元素为基准点的 */
+    }
+</style>
+<body>
+
+    <div>
+        <p>content</p>
+    </div>
+
+</body>
+</html>
