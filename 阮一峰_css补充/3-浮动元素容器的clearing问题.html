@@ -1,0 +1,47 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>浮动清理问题</title>
+</head>
+<!--
+元素浮动后，会脱离父级元素；所以需要清除浮动
+-->
+<style>
+    .father_div {
+        width: 30%;
+
+        /*解决方法二：浮动的父容器，父级元素也改成浮动*/
+        /*float: left;*/
+
+        /*解决方法三：浮动元素的自动clearing 思路是让父容器变得可以自动"清理"（clearing）子元素的浮动 */
+        overflow: hidden;
+        
+        border: 1px solid black;
+    }
+    .left {
+        float:left;
+        width:45%;
+        height: 200px;
+        border: 1px solid red;
+    }
+    .right {
+        float:right;
+        width:45%;
+        height: 200px;
+        border: 1px solid blue;
+    }
+</style>
+<body>
+<div class="father_div">
+
+    <div class="left"></div>
+    <div class="right"></div>
+
+<!--  解决方法一：添加空元素  -->
+<!--  <div style="clear: both"></div>-->
+
+</div>
+
+
+</body>
+</html>
