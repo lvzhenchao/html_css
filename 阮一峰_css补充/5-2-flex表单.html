@@ -1,0 +1,30 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>flex 表单</title>
+</head>
+
+<!--
+1、flex 后 可以看到，两个控件之间的间隔消失了，因为弹性布局的项目（item）默认没有间隔。
+
+
+
+
+-->
+<style>
+    form {
+        display: flex;
+    }
+    input {
+        flex-grow: 1;
+        align-self: center;
+    }
+</style>
+<body>
+<form>
+    <input type="email" placeholder="Enter your email">
+    <button type="button"><svg>  <!-- a smiley icon -->  </svg></button>
+</form>
+</form>
+</body>
+</html>
