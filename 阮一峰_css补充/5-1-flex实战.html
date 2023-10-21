@@ -1,0 +1,32 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>flex</title>
+</head>
+<!-- 参考 https://www.ruanyifeng.com/blog/2015/07/flex-examples.html -->
+<style>
+    .box {
+        border: 1px solid blue;
+        display: flex; /* 单个项目就他就行 */
+        justify-content: center; /* 主轴水平居中 */
+        /*justify-content: flex-end; !* 主轴水平居后 *!*/
+
+        height: 600px;
+        align-items: center; /* 垂直交叉轴居中, 有高度才会垂直居中*/
+    }
+    .item {
+        width: 200px;
+        height: 200px;
+        border: 1px solid red;
+    }
+</style>
+
+<body>
+
+<div class="box">
+    <span class="item">sss</span>
+</div>
+
+
+</body>
+</html>
