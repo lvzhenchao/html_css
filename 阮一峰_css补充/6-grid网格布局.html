@@ -1,0 +1,65 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>grid网格布局</title>
+</head>
+
+<!--
+flex布局是轴线布局，只能只对指定 "项目"针对轴线位置；看坐【一维布局】
+grid布局则是将容器划分成"行"和"列"，产生单元格；看作【二维布局】
+参考：https://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html
+
+注意，设为网格布局以后，容器子元素（项目）的float、display: inline-block、display: table-cell、vertical-align和column-*等设置都将失效。
+
+1、列宽和行高：数值和百分比都行
+grid-template-columns 属性：每一列的列宽
+grid-template-rows 属性：每一行的行高
+
+2、行间距和列间距
+grid-row-gap 属性：行间距
+grid-column-gap 属性：列间距
+grid-gap 属性：简写形式
+
+根据最新标准，上面三个属性名的grid-前缀已经删除，
+grid-column-gap和grid-row-gap写成column-gap和row-gap，grid-gap写成gap。
+
+3、定义区域
+grid-template-areas: 'a b c'
+                       'd e f'
+                       'g h i';
+
+
+
+-->
+
+<style>
+    .grid_class {
+        width: 100px;
+        height: 100px;
+        border: 1px solid red;
+    }
+    div {
+        display: grid;
+        /*display: inline-grid; 行内*/
+        /*grid-template-columns: 100px 100px 100px;*/
+        /*grid-template-rows: 100px 100px 100px;*/
+
+        /*grid-template-columns: 33.33% 33.33% 33.33%;*/
+        /*grid-template-rows: 33.33% 33.33% 33.33%;*/
+
+        /*repeat() 函数，简化重复的值*/
+        grid-template-columns: repeat(3, 33.33%);
+        grid-template-rows: repeat(3, 33.33%);
+    }
+</style>
+
+<body>
+
+<div>
+    <div class="grid_class"><p>1</p></div>
+    <div class="grid_class"><p>2</p></div>
+    <div class="grid_class"><p>3</p></div>
+</div>
+
+</body>
+</html>
